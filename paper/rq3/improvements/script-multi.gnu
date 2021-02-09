@@ -51,7 +51,7 @@ set datafile separator '\t'
 set key horizontal maxrows 1
 
 
-set key at 1, 1.15
+set key at 1.1, 1.15
 unset ylabel
 set yrange [0:1]
 #set title "Effectiveness"
@@ -63,7 +63,7 @@ NaN with boxes ls 2 title "Trivial"
 set lmargin 0.8
 unset key
 unset ylabel
-set yrange [0:*]
+set yrange [0:1]
 #set title "Extendibility"
 set xlabel "Extendibility"
 plot for [i=1:2] 'Extendibility.txt' using (i):i notitle
