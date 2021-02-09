@@ -45,10 +45,10 @@ unset title
 set grid
 #set ylabel "Rate of Improvement (%)"
 
-set xtics rotate by 90 center offset 0,17.5
+set xtics rotate by 90 center offset 0, 14
 
 #set tmargin 5
-set rmargin 2
+set rmargin 3
 
 
 
@@ -62,17 +62,16 @@ set rmargin 2
 set style line 1 lc rgb "#C275E6"
 set style line 2 lc rgb "#75C8B0"
 
-#set yrange [0:*]
-
 set datafile separator '\t'
 
 set ytics rotate by 90 center
 unset key
+
 set yrange [0:100]
-unset ylabel
+
 set tmargin 1
 set bmargin 5
-set lmargin 0
+set lmargin 3
 #
 
 set y2label "Trivial Graphs"
