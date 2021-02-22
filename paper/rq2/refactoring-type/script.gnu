@@ -1,7 +1,7 @@
 
 
 
-set terminal pdf enhanced size 3,3
+set terminal pdf enhanced size 1.8,3
 set output 'rq2-refactoring-type.pdf'
 
 #set multiplot layout 1,6
@@ -21,13 +21,12 @@ unset title
 set grid
 #set ylabel "Rate of Improvement (%)"
 
-set xtics rotate by 0 offset 0,0
 
 # set tmargin 5
-set lmargin 7
+set lmargin 6
 set rmargin 0
-
-set bmargin 15
+set tmargin 0
+set bmargin 11
 
 set xtics ( \
 "Decrease Field Security" 1, \
@@ -60,10 +59,12 @@ set datafile separator '\t'
 #set key inside bottom center horizontal font "Helvetica, 20" width 1.8
 set key horizontal maxrows 1
 
-set xtics rotate by 90 right font "Verdana, 13" 
+set xtics rotate by 90 right font "Verdana, 12" 
 
-set ylabel ("# of Graphs") font "Verdana, 13" 
+set ylabel ("# of Graphs") font "Verdana, 12"  offset 3,0
 set yrange [0:30]
+set ytics 6
+
 #set title "Effectiveness"
 #set xlabel "# Of \n Dependencies"
 plot for [i=1:14] 'data.txt' using (i):i notitle, \

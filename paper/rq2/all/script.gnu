@@ -1,7 +1,7 @@
 
 
 
-set terminal pdf enhanced size 6,3
+set terminal pdf enhanced size 4,2
 set output 'rq2-all.pdf'
 
 set multiplot layout 1,5
@@ -42,7 +42,7 @@ set xtics ( \
 
 set style line 1 lc rgb "#C275E6"
 set style line 2 lc rgb "#75C8B0"
-
+set ytics 20
 #set yrange [0:*]
 
 set datafile separator '\t'
@@ -54,6 +54,7 @@ set key horizontal maxrows 1
 
 set key at 1, 1.25
 unset ylabel
+set ytics 20
 #set yrange [0:1]
 #set title "Effectiveness"
 set xtics ("# of \n Dependencies" 1) font "Verdana, 13" 
@@ -61,7 +62,8 @@ plot for [i=1:1] 'data-1.txt' using (i):i notitle, \
 
 set key at 1, 1.25
 unset ylabel
-set yrange [0: 180]
+set ytics 40
+set yrange [0: 200]
 #set title "Effectiveness"
 set xtics ("# of \n  Graphs" 1) font "Verdana, 13" 
 plot for [i=1:1] 'data-2.txt' using (i):i notitle, \
@@ -69,16 +71,18 @@ plot for [i=1:1] 'data-2.txt' using (i):i notitle, \
 
 set key at 1, 1.25
 unset ylabel
+set ytics 40
 #set yrange [0:1]
 #set title "Effectiveness"
-set xtics ("# of \n Non-Trivial Graphs" 1) font "Verdana, 13" 
+set xtics ("# of \n Non-Trivial \n Graphs" 1) font "Verdana, 13" 
 plot for [i=1:1] 'data-3.txt' using (i):i notitle, \
 
 set key at 1, 1.25
 unset ylabel
+set ytics 40
 #set yrange [0:1]
 #set title "Effectiveness"
-set xtics ("# of \n Trivial Graphs" 1) font "Verdana, 13" 
+set xtics ("# of \n Trivial \n Graphs" 1) font "Verdana, 13" 
 plot for [i=1:1] 'data-5.txt' using (i):i notitle, \
 
 # set key at 1, 1.25
@@ -91,7 +95,7 @@ plot for [i=1:1] 'data-5.txt' using (i):i notitle, \
 
 set key at 1, 1.25
 unset ylabel
-set ytics 0.1
+set ytics 0.2
 set yrange [0:1]
 #set title "Effectiveness"
 set xtics ("NTR \n" 1) font "Verdana, 13" 
