@@ -49,7 +49,7 @@ set yrange [0:*]
 
 set lmargin 5
 set rmargin at screen 0.7
-plot for [i=3:5] 'data.txt' using (i):i notitle
+plot for [i=4:5] 'data.txt' using (i):i notitle
 
 ########################################################
 

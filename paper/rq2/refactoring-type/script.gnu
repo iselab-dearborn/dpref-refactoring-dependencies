@@ -61,7 +61,7 @@ set key horizontal maxrows 1
 
 set xtics rotate by 90 right font "Verdana, 12" 
 
-set ylabel ("# of Graphs") font "Verdana, 12"  offset 3,0
+set ylabel ("# of Non-Trivial Graphs") font "Verdana, 12"  offset 3,0
 set yrange [0:30]
 set ytics 6
 

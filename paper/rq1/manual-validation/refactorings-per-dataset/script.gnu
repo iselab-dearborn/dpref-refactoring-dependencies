@@ -16,7 +16,7 @@ set xtics ("Dataset #1" 1, "Dataset #2" 2, "Dataset #3" 3, "Dataset #4" 4, "Data
 #set xtics rotate
 set ytics 1
 #set ytics rotate
-set ylabel "# of Refactorings"
+set ylabel "# of Refactorings \n per Graph"
 set yrange [0:10]
 
 set datafile separator "\t"
