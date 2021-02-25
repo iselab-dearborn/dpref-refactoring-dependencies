@@ -28,7 +28,7 @@ set xtics ( \
     "Before: Valid \n Non-trivial \n Graphs" 1, \
     "After: Valid \n Non-trivial \n Graphs" 2, \
     "Before: Invalid \n Non-trivial \n Graphs"	3, \
-    "After: Invalid \n Non-trivial \n Graphs " 4, \
+    "Invalid Non-trivial \n Graphs after \n Refactoring Removal" 4, \
     "Number Of \n Considered \n Non-trivial \n Graphs" 5, \
 )
 
