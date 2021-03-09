@@ -1,13 +1,13 @@
 
 
 
-set terminal pdf enhanced size 8,4
+set terminal pdf enhanced size 10,2
 set output 'rq2-frequency.pdf'
 
 #set multiplot layout 1,6
 
 set style fill solid 0.25 border -1
-set style boxplot outliers pointtype 6
+set style boxplot nooutliers pointtype 6
 set style data boxplot
 
 
@@ -61,7 +61,7 @@ set xtics ( \
     "28" 28, \
     "29" 29, \
     "30" 30, \
-    "30+" 31, \
+    "31+" 31, \
     "32" 32, \
     "33" 33, \
     "34" 34, \
@@ -103,4 +103,5 @@ set ylabel ("# of Graphs") font "Verdana, 13"
 set yrange [-2:35]
 #set title "Effectiveness"
 #set xlabel "# Of \n Dependencies"
+set grid
 plot for [i=1:31] 'data.txt' using (i):i notitle pointsize 0.05, \
