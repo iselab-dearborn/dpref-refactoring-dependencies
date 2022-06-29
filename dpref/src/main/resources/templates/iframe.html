@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: title('DPRef - ISE Lab')"></head>
+<body>
+    <style>body{margin-top: 0px;background-color: white;}</style>
+    <div id="graphs" class="d-none" th:text="${graphs}"></div>
+	<div th:replace="fragments/graph :: default"></div>
+	<div th:replace="fragments/footer :: footer"></div>
+	<script>
+	
+	   $(function(){
+		   
+		   var graphText = $("#graphs").text();
+		   
+		   graphs = JSON.parse(graphText);
+		   
+		   openGraph(graphs[0]);
+	   }); 
+	   /* $.ajax({
+	 */
+	</script>
+</body>
+</html>

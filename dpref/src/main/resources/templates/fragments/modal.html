@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+    <div th:fragment="output" class="modal fade" id="modal-output" tabindex="-1">
+		<div class="modal-dialog modal-xl modal-dialog-scrdollable" role="document">
+		    <div class="modal-content">
+		        <div class="modal-header">
+		            <h5 class="modal-title" id="exampleModalLabel">Output</h5>
+		            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                <span aria-hidden="true">&times;</span>
+		            </button>
+		        </div>
+		        <div class="modal-body">
+                    <div th:replace="fragments/graph :: default"></div>
+                </div>
+	            <div class="modal-footer">
+	                <div class="dropdown-menu" id="context-menu">
+			            <a class="dropdown-item" href="#" id="btn-remove-node">Remove Node</a>
+			        </div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div th:fragment="about" class="modal fade" id="modal-about" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                   <img th:src="@{/images/logo-with-name-colorful.png}" width="220px"/>
+                   <p class="mt-2" th:text="${appDescription}">Description</p>
+                   <p>Version: <span class="text-muted" th:text="${appVersion}">1.0.0</span></p>
+                   <p class="font-weight-bold">Powered by</p>
+                   <a target="_blank" href="https://umdearborn.edu">
+                        <img th:src="@{/images/umich-dearborn-logo.png}" width="50px" class="mr-2"/>
+                   </a>
+                   <a target="_blank" href="http://iselab.us" >
+                        <img th:src="@{/images/iselab-logo.png}" width="110px" />
+                   </a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

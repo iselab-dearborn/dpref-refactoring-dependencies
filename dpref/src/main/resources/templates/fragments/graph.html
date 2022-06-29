@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+    <div th:fragment="default">
+		<div class="row">
+            <div class="col-2" id="my-sidebar">
+            
+            </div>
+            <div class="col-8">
+                <div id="graph"></div>
+            </div>
+            <div class="col-2 pl-0">
+                <div class="right-sidebar">
+                    <nav class="mb-3">
+                        <div class="nav nav-tabs nav-fill" id="nav-tab">
+                            <a class="nav-item nav-link pl-2 pr-2 active" id="nav-info-tab" data-toggle="tab" href="#nav-info">Info</a>
+                            <a class="nav-item nav-link pl-2 pr-2" id="nav-filter-tab" data-toggle="tab" href="#nav-filter">Filter</a>
+                            <a class="nav-item nav-link pl-2 pr-2" id="nav-style-tab" data-toggle="tab" href="#nav-style">Style</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="nav-info">
+                            <div id="myToolbox"></div>
+                        </div>
+                        <div class="tab-pane fade show" id="nav-filter">
+                            <form id="filtersForm">
+                                <p class="font-weight-bold">Improvements</p>
+                                <div class="form-group">
+                                    <label for="filterByMetrics">Metrics</label><br/>
+                                    <select class="form-control selectpicker" multiple id="filterByMetrics" data-live-search="true" data-size="6" data-actions-box="true" data-container="body" data-width="75%" data-style-base="btn btn-sm">
+                                    </select>
+                                </div>
+                                <div class="form-group test">
+                                   <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" id="useColorsBasedOnMetrics" checked="checked">
+                                       <label class="form-check-label" for="useColorsBasedOnMetrics">Use colors based on metrics</label>
+                                   </div>
+                               </div>
+                               <hr/>
+                                <p class="font-weight-bold mt-3">Elements</p>
+                                <div class="form-group">
+                                    <label for="filterByClassnames">Classes</label><br/>
+                                    <select class="form-control selectpicker" multiple id="filterByClassnames" data-live-search="true" data-size="6" data-actions-box="true" data-container="body" data-width="75%" data-style-base="btn btn-sm"></select>
+                                </div>
+                                <div class="form-check">
+                                   <input class="form-check-input" type="checkbox" id="ignoreSubgraphWithNotEdges">
+                                   <label class="form-check-label" for="ignoreSubgraphWithNotEdges">Ignore subgraphs with no edges</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade show" id="nav-style">
+                            <form id="settingsForm">
+                               <p class="font-weight-bold">Layout</p>
+                               <div class="form-check">
+                                   <input class="form-check-input" type="checkbox" id="useGroupSequenceLayout" checked="checked">
+                                   <label class="form-check-label" for="useGroupSequenceLayout">Use group sequence layout</label>
+                               </div>
+                               <div class="form-check">
+                                   <input class="form-check-input" type="checkbox" id="usePhysics">
+                                   <label class="form-check-label" for="usePhysics">Use physics</label>
+                               </div>
+                               <p class="font-weight-bold mt-3">Nodes</p>
+                               <div class="form-check">
+                                   <input class="form-check-input" type="checkbox" id="showNodeLabels" checked="checked">
+                                   <label class="form-check-label" for="showNodeLabels">Show node labels</label>
+                               </div>
+                               <div class="form-check">
+                                   <input class="form-check-input" type="checkbox" id="useSimpleClassnames" checked="checked">
+                                   <label class="form-check-label" for="useSimpleClassnames">Use simple classnames</label>
+                               </div>
+                               <p class="font-weight-bold mt-3">Edges</p>
+                               <div class="form-check">
+                                   <input class="form-check-input" type="checkbox" id="showEdgeLabels">
+                                   <label class="form-check-label" for="showEdgeLabels">Show edge labels</label>
+                               </div>
+                               <div class="form-check">
+                                   <input class="form-check-input" type="checkbox" id="useInvertedArrows">
+                                   <label class="form-check-label" for="useInvertedArrows">Use inverted arrows</label>
+                               </div>
+                               <div class="form-check">
+                                   <input class="form-check-input" type="checkbox" id="mergeEdges" checked="checked">
+                                   <label class="form-check-label" for="mergeEdges">Merge Edges</label>
+                               </div>
+                               <p class="font-weight-bold mt-3">Information Box</p>
+                               <div class="form-check">
+                                   <input class="form-check-input" type="checkbox" id="showPercentage">
+                                   <label class="form-check-label" for="showPercentage">Show percentage</label>
+                               </div>
+                           </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>

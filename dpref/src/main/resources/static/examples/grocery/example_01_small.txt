@@ -1,0 +1,4 @@
+ExtractSuperClass(org.iselab.grocery.repository.ProductRepository;Class_7;[];[save];[])
+PushDownMethod(Class_7;org.iselab.grocery.repository.ProductRepository;[];[save];[])
+PullUpMethod(org.iselab.grocery.repository.ProductRepository;Class_7;[];[save];[])
+MoveMethod(Class_7;org.iselab.grocery.domain.Product;[];[save];[])

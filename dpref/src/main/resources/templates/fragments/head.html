@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head></head>
+    <body>
+        <head th:fragment="title(title)">
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            
+            <meta charset="utf-8" />
+           
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+            <meta name="description" content="Generate a dependency graph by a sequence of refactorings" />
+            <meta name="author" content="ISE Lab" />
+            <meta name="keywords" content="refactoring,dependency-graph,java" />
+            
+            <meta name="robots" content="index, follow" />
+            
+            <link rel="shortcut icon" th:href="@{/images/favicon.ico}" type="image/x-icon">
+            <link rel="icon" th:href="@{/images/favicon.ico}" type="image/x-icon">
+            
+            <!-- Vendor -->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700&amp;subset=latin-ext&amp;display=swap">
+            <link type="text/css" rel="stylesheet" th:href="@{/webjars/bootstrap/4.4.1/css/bootstrap.min.css}" />
+            <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+            <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+             
+            <link type="text/css" rel="stylesheet" th:href="@{/css/vendor/toast.min.css}"/>
+            
+            <!-- Application -->
+            <link type="text/css" rel="stylesheet" th:href="@{/css/style.css}"/>
+            
+            <title th:text="${title}"></title>
+        </head>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+	<div th:fragment="default">
+		<header>
+			<nav class="navbar navbar-expand-lg fixed-top  navbar-custom">
+				<a class="navbar-brand" href="/">
+				    <img th:src="@{/images/logo.png}" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;
+				    <strong>DPRef</strong>
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+				    <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav mr-auto">
+                        <!-- Level one dropdown -->
+                        <li class="nav-item dropdown">
+                            <a id="dropdownMenu1" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Examples</a>
+                            <ul class="dropdown-menu border-0 shadow">
+                                <li class="dropdown-submenu">
+                                    <a id="dropdownMenu2" href="#" data-toggle="dropdown" class="dropdown-item dropdown-toggle">Grocery</a>
+                                    <ul class="dropdown-menu border-0 shadow">
+                                        <li><a class="dropdown-item example" href="#" data-project-name = "grocery" data-file="grocery/example_01_small.txt">Example 01 <span class="text-muted">(Small)</span></a></li>
+                                        <li><a class="dropdown-item example" href="#" data-project-name = "grocery" data-file="grocery/example_02_small.txt">Example 02 <span class="text-muted">(Small)</span></a></li>
+                                        <li><a class="dropdown-item example" href="#" data-project-name = "grocery" data-file="grocery/example_03_medium.txt">Example 03 <span class="text-muted">(Medium)</span></a></li>
+                                        <li><a class="dropdown-item example" href="#" data-project-name = "grocery" data-file="grocery/example_04_medium.txt">Example 04 <span class="text-muted">(Medium)</span></a></li>
+                                        <li><a class="dropdown-item example" href="#" data-project-name = "grocery" data-file="grocery/example_05_large.txt">Example 05 <span class="text-muted">(Large)</span></a></li>
+                                        <li><a class="dropdown-item example" href="#" data-project-name = "grocery" data-file="grocery/example_06_large.txt">Example 06 <span class="text-muted">(Large)</span></a></li>
+                                        <li><a class="dropdown-item example" href="#" data-project-name = "grocery" data-file="grocery/example_07.txt">Example 13 <span class="text-muted">(Small)</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a id="dropdownMenu3" href="#" data-toggle="dropdown" class="dropdown-item dropdown-toggle">JFreeChart</a>
+                                    <ul class="dropdown-menu border-0 shadow">
+                                        <li><a class="dropdown-item example" href="#" data-project-name = "jfreechart" data-file="jfreechart/example_01_small.txt">Example 07 <span class="text-muted">(Small)</span></a></li>
+                                        <li><a class="dropdown-item example" href="#" data-project-name = "jfreechart" data-file="jfreechart/example_02_small.txt">Example 08 <span class="text-muted">(Small)</span></a></li>
+                                        <li><a class="dropdown-item example" href="#" data-project-name = "jfreechart" data-file="jfreechart/example_03_medium.txt">Example 09 <span class="text-muted">(Medium)</span></a></li>
+                                        <li><a class="dropdown-item example" href="#" data-project-name = "jfreechart" data-file="jfreechart/example_04_medium.txt">Example 10 <span class="text-muted">(Medium)</span></a></li>
+                                        <li><a class="dropdown-item example" href="#" data-project-name = "jfreechart" data-file="jfreechart/example_05_large.txt">Example 11 <span class="text-muted">(Large)</span></a></li>
+                                        <li><a class="dropdown-item example" href="#" data-project-name = "jfreechart" data-file="jfreechart/example_06_large.txt">Example 12 <span class="text-muted">(Large)</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item example" href="#" data-project-name = "" data-file="random">Random</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a href="https://github.com/thiagodnf/dpref/tree/master/src/main/resources/static/examples" target="_blank" class="dropdown-item">More Examples</a></li>
+                            </ul>
+                        </li>
+				        <li class="nav-item dropdown">
+                            <a class="nav-link" target="_blank" href="https://github.com/thiagodnf/dpref">Help</a>
+                        </li>
+				        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#modal-about">About</a>
+                        </li>
+                    </ul>
+                </div>
+			</nav>
+		</header>
+	</div>
+</body>
+</html>

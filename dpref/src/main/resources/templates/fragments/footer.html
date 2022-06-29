@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head></head>
+    <body>
+        <div th:fragment="footer">
+        
+            <!-- Vendors -->
+            <script type="text/javascript" th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+            <script type="text/javascript" th:src="@{/webjars/popper.js/1.16.0/dist/umd/popper.min.js}"></script>
+            <script type="text/javascript" th:src="@{/webjars/bootstrap/4.4.1/js/bootstrap.min.js}"></script>
+            <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+            
+            <script type="text/javascript" src="https://unpkg.com/@hpcc-js/wasm@0.3.6/dist/index.min.js"></script>
+            <script type="text/javascript" src="https://unpkg.com/d3-graphviz@3.0.0/build/d3-graphviz.js"></script>
+            
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.min.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/mode-dot.min.js"></script>
+            
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/webjars/org.webjars.npm/github-com-thiagodnf-visjs-extras-groupsequence/1.0.0/group-sequence.js"></script>
+            
+            
+            <script type="text/javascript" th:src="@{/js/vendor/toast.min.js}"></script>
+            
+            <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+            
+            <!-- Application -->
+            
+            <script type="text/javascript" th:src="@{/js/app/component/sidebar.js}"></script>
+            <script type="text/javascript" th:src="@{/js/app/component/alert.js}"></script>
+            <script type="text/javascript" th:src="@{/js/app/component/toolbox.js}"></script>
+            
+            <script type="text/javascript" th:src="@{/js/app/util/metrics.js}"></script>
+            <script type="text/javascript" th:src="@{/js/app/util/converter.js}"></script>
+            <script type="text/javascript" th:src="@{/js/app/util/filter.js}"></script>
+            <script type="text/javascript" th:src="@{/js/app/util/select-utils.js}"></script>
+            <script type="text/javascript" th:src="@{/js/app/util/color-utils.js}"></script>
+            
+            <script type="text/javascript" th:src="@{/js/random.js}"></script>
+            <script type="text/javascript" th:src="@{/js/script.js}"></script>
+            
+            <script src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js"></script>
+			
+			<script type="text/javascript">
+                if (location.host == "127.0.0.1:8081" || location.host == "localhost:8081") {
+                    
+                    var script = document.createElement('script');
+                    
+                    script.src = "http://" + (location.host || 'localhost').split(':')[0] + ":35729/livereload.js?snipver=1"
+                            
+                    document.head.appendChild(script);
+                } else {
+                	 window.loadWatsonAssistantChat({
+	                     integrationID: "5e561d18-2dff-47f1-92de-0e6738456633", // The ID of this integration.
+	                     region: "us-east" // The region your integration is hosted in.
+                     }).then(function(instance){
+                        instance.render();
+                     });
+                }
+            </script>
+        </div>
+    </body>
+</html>
